@@ -1,17 +1,8 @@
 package net.stalin.stalinrpg.network.networking;
 
-import javafx.concurrent.Task;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.*;
-import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.monster.IMob;
-import net.minecraft.entity.monster.SlimeEntity;
-import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.DragonFireballEntity;
-import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,19 +12,9 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.RayTraceContext;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import net.stalin.stalinrpg.StalinRpg;
-import net.stalin.stalinrpg.effect.FreezeEffect;
 import net.stalin.stalinrpg.effect.ModEffects;
 import net.stalin.stalinrpg.item.ModGroup;
-import net.stalin.stalinrpg.network.networking.skills.LightningBolt;
-import net.stalin.stalinrpg.sounds.SoundEventRegistry;
 
 import javax.annotation.Nonnull;
 import java.util.*;
@@ -66,6 +47,8 @@ public class TestMessage extends Item {
                 livingEntity.addEffect(new EffectInstance(ModEffects.FREEZE.get(), 225, 1));
                 livingEntity.addEffect(new EffectInstance(Effects.WEAKNESS, 225, 999));
                 livingEntity.setItemSlot(EquipmentSlotType.HEAD, new ItemStack(Items.ICE));
+
+                //Test commit
 
                 worldIn.addParticle(ParticleTypes.SOUL_FIRE_FLAME, xX + Math.toRadians(0) * radius, yY + 3, zZ, 0,0,0);
 
