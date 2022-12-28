@@ -1,0 +1,12 @@
+{
+  "explosion": {
+    "subtitle": "StalinRpg.explosion",
+    "replace": "true",
+    "sounds": [
+      {
+        "name": "stalinrpg:explosion",
+        "stream": true
+      }
+    ]
+  }
+}
