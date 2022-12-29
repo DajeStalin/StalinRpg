@@ -3,10 +3,8 @@ package net.stalin.stalinrpg.network.networking;
 import net.minecraft.entity.*;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -49,7 +47,6 @@ public class TestMessage extends Item {
 
                 livingEntity.addEffect(new EffectInstance(ModEffects.FREEZE.get(), 225, 1));
                 livingEntity.addEffect(new EffectInstance(Effects.WEAKNESS, 225, 999));
-                livingEntity.setItemSlot(EquipmentSlotType.HEAD, new ItemStack(Items.ICE));
 
                 Timer timer;
                 TimerTask mTimerTask;
@@ -59,7 +56,6 @@ public class TestMessage extends Item {
                         int countdownStarter = 22;
                         @Override
                         public void run() {
-//                            StalinRpg.LOGGER.info("------->Run");
 
                             worldIn.addParticle(ParticleTypes.SOUL_FIRE_FLAME, xX + Math.toRadians(0) * cRadius, yY + 3, zZ, 0,0,0);
 
@@ -107,10 +103,6 @@ public class TestMessage extends Item {
         /* Типа полёт
         Vector3d vec3 = playerIn.getViewVector(0f);
         playerIn.push(vec3.x, vec3.y, vec3.z);
-        */
-
-        /* Частицы
-        * worldIn.addParticle(ParticleTypes.DAMAGE_INDICATOR, x, y, z, random.nextDouble(),random.nextDouble(),random.nextDouble());
         */
 
 
