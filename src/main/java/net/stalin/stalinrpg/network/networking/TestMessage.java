@@ -23,7 +23,7 @@ import java.util.Timer;
 public class TestMessage extends Item {
 
     public TestMessage() {
-        super(new Properties().tab(ModGroup.itemGroup));
+        super(new Properties().tab(ModGroup.STALINRPG));
     }
 
     @Nonnull
@@ -41,9 +41,6 @@ public class TestMessage extends Item {
             if (mob.getEntity() instanceof IMob) {
                 Entity entity = mob.getEntity();
                 LivingEntity livingEntity = (LivingEntity) entity.getEntity();
-                double xX = entity.getX();
-                double yY = entity.getY();
-                double zZ = entity.getZ();
 
                 livingEntity.addEffect(new EffectInstance(ModEffects.FREEZE.get(), 225, 1));
                 livingEntity.addEffect(new EffectInstance(Effects.WEAKNESS, 225, 999));
@@ -56,6 +53,10 @@ public class TestMessage extends Item {
                         int countdownStarter = 22;
                         @Override
                         public void run() {
+
+                            double xX = entity.getX();
+                            double yY = entity.getY();
+                            double zZ = entity.getZ();
 
                             worldIn.addParticle(ParticleTypes.SOUL_FIRE_FLAME, xX + Math.toRadians(0) * cRadius, yY + 3, zZ, 0,0,0);
 

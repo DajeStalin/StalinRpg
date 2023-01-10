@@ -41,19 +41,19 @@ public class KeyBoardInput {
             "Other");
     public static final KeyBinding LIGHTNING_BOLD_KEY = new KeyBinding("Lightning bolt",
             KeyConflictContext.IN_GAME,
-            KeyModifier.SHIFT,
+            KeyModifier.CONTROL,
             InputMappings.Type.KEYSYM,
             GLFW.GLFW_KEY_K,
             "Class Mage");
     public static final KeyBinding FIREBALL_KEY = new KeyBinding("Fireball",
             KeyConflictContext.IN_GAME,
-            KeyModifier.SHIFT,
+            KeyModifier.CONTROL,
             InputMappings.Type.KEYSYM,
             GLFW.GLFW_KEY_L,
             "Class Mage");
     public static final KeyBinding EXPLODE_KEY = new KeyBinding("Explode",
             KeyConflictContext.IN_GAME,
-            KeyModifier.SHIFT,
+            KeyModifier.CONTROL,
             InputMappings.Type.KEYSYM,
             GLFW.GLFW_KEY_O,
             "Class Mage");

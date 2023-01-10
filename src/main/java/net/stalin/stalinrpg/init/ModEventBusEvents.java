@@ -2,11 +2,14 @@ package net.stalin.stalinrpg.init;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.stalin.stalinrpg.StalinRpg;
@@ -47,4 +50,5 @@ public class ModEventBusEvents {
                 RenderSystem.enableDepthTest();
         }
     }
+
 }
