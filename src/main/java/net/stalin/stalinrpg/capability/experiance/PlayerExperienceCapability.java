@@ -97,7 +97,7 @@ public class PlayerExperienceCapability implements IBaseExperienceCapability{
 
     @Override
     public void setLevelChange(int levelchange, PlayerEntity pe) {
-        this.levelchange = levelchange * currentLevel;
+        this.levelchange = levelchange * (currentLevel + 1);
         if (!pe.level.isClientSide)
             sendExperienceChangesToClient((ServerPlayerEntity) pe);
         else

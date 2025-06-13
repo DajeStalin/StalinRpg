@@ -58,7 +58,7 @@ public class ExperienceCapabilityAddExpEvent {
         Random r = new Random();
         int min = 1;
         int max = 20;
-        return 50 + r.nextInt(max - min);
+        return 50 + r.nextInt(max - min + 1) + min;
     }
 
     // генерация случайного колличества поинтов
@@ -93,7 +93,7 @@ public class ExperienceCapabilityAddExpEvent {
         expCap.addExperience(randomExp(), player);
         expCap.addPoints(randomPoints(), player);
 
-        if (currentExp > levelChange) {
+        if (currentExp >= levelChange) {
             expCap.addLevel(1, player);
             expCap.setExperience(currentExp - levelChange, player);
             expCap.setLevelChange(levelChange, player);
